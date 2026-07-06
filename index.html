@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REYMONT MONTACARGAS | Mantenimiento, Reparación y Renta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<!-- ══ TIRA DE SERVICIOS ══ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="ticker-icon">🔧</span>Reparación de Montacargas</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">📅</span>Mantenimiento Preventivo y Correctivo</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">🚛</span>Renta de Montacargas</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">🛒</span>Venta de Equipos Nuevos</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">📦</span>Venta de Refacciones y Llantas</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">👷</span>Maniobras con Operador</span>
+    <span class="ticker-dot">•</span>
+    <!-- duplicado para loop continuo -->
+    <span class="ticker-item"><span class="ticker-icon">🔧</span>Reparación de Montacargas</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">📅</span>Mantenimiento Preventivo y Correctivo</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">🚛</span>Renta de Montacargas</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">🛒</span>Venta de Equipos Nuevos</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">📦</span>Venta de Refacciones y Llantas</span>
+    <span class="ticker-dot">•</span>
+    <span class="ticker-item"><span class="ticker-icon">👷</span>Maniobras con Operador</span>
+    <span class="ticker-dot">•</span>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#inicio" class="brand">
+      <div class="brand-logo-box">
+        <img src="./assets/logo.png" alt="REYMONT Montacargas">
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="nav-whatsapp" href="https://wa.me/523312345678" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        +52 33 1234 5678
+      </a>
+      <a class="btn-nav" href="#contacto">Solicitar Cotización</a>
+    </div>
+    <button class="hamburger" id="hamBtn" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Panel lateral móvil -->
+  <div class="nav-drawer-overlay" id="drawerOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <div class="drawer-head">
+      <div class="brand-logo-box">
+        <img src="./assets/logo.png" alt="REYMONT Montacargas">
+      </div>
+      <button class="drawer-close" id="drawerCloseBtn" aria-label="Cerrar menú">✕</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="drawer-foot">
+      <a class="drawer-whatsapp" href="https://wa.me/523312345678" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        +52 33 1234 5678
+      </a>
+      <a class="btn-nav" href="#contacto">Solicitar Cotización</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="inicio">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-rule"></div>
+      <h1 class="hero-h1">
+        Mantenimiento,<br>
+        <span class="accent">Reparación</span><br>
+        y Renta de<br>
+        <span class="accent2">Montacargas</span>
+      </h1>
+      <p class="hero-sub">Brindamos soluciones rápidas y confiables para mantener la operación de su empresa sin interrupciones en Guadalajara y zona metropolitana.</p>
+      <div class="hero-checks">
+        <div class="check-item">
+          <svg class="check-icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#2E7D32"/><path d="M5 9l3 3 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Atención rápida
+        </div>
+        <div class="check-item">
+          <svg class="check-icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#2E7D32"/><path d="M5 9l3 3 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Servicio especializado
+        </div>
+        <div class="check-item">
+          <svg class="check-icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#2E7D32"/><path d="M5 9l3 3 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Refacciones múltiples marcas
+        </div>
+        <div class="check-item">
+          <svg class="check-icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="9" fill="#2E7D32"/><path d="M5 9l3 3 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Cobertura Guadalajara y ZMG
+        </div>
+      </div>
+      <div class="hero-btns">
+        <a class="btn-primary" href="#contacto">Solicitar Cotización</a>
+        <a class="btn-wa" href="https://wa.me/523312345678" target="_blank">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="hero-img-box">
+      <div class="hero-img-wrap">
+        <img src="./assets/inicio.png" alt="Montacargas en operación industrial">
+        <div class="hero-stats">
+          <div class="stat"><span class="num">10+</span><span class="lbl">Años de Exp.</span></div>
+          <div class="stat"><span class="num">15+</span><span class="lbl">Marcas Atendidas</span></div>
+          <div class="stat"><span class="num">&lt;4h</span><span class="lbl">Tiempo Respuesta</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ NOSOTROS ══ -->
+<section id="nosotros">
+  <div class="nos-grid">
+    <div>
+      <span class="eyebrow">Sobre Nosotros</span>
+      <h2 class="sec-h2">Más de una década brindando <span class="accent">soluciones industriales</span></h2>
+      <p class="nos-p" style="margin-top:.9rem"><strong>REYMONT</strong> es una empresa especializada en mantenimiento, reparación y renta de montacargas y traspaletas hidráulicas. Trabajamos con empresas de todos los sectores industriales en Guadalajara y la zona metropolitana.</p>
+      <p class="nos-p">Contamos con experiencia en diversas marcas y acceso a una amplia red de proveedores para ofrecer tiempos de respuesta rápidos y soluciones efectivas que mantienen su operación funcionando.</p>
+      <div class="nos-values">
+        <div class="val-row">
+          <div class="val-icon">🛡️</div>
+          <div>
+            <h4>Seguridad</h4>
+            <p>Equipos certificados y procedimientos que cumplen con las normas de seguridad industrial.</p>
+          </div>
+        </div>
+        <div class="val-row">
+          <div class="val-icon">💲</div>
+          <div>
+            <h4>Economía</h4>
+            <p>Soluciones accesibles sin sacrificar la calidad del servicio ni la vida útil de sus equipos.</p>
+          </div>
+        </div>
+        <div class="val-row">
+          <div class="val-icon">🔧</div>
+          <div>
+            <h4>Durabilidad</h4>
+            <p>Reparaciones y mantenimientos que maximizan la vida útil de cada equipo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nos-right">
+      <img class="nos-img"
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85&auto=format&fit=crop"
+        alt="Técnico especializado trabajando en montacargas"
+        onerror="this.src='https://images.unsplash.com/photo-1581244277943-fe4a9c777540?w=800&q=85&auto=format&fit=crop'"
+      >
+      <div class="nos-badge">
+        <span class="num">10+</span>
+        <span class="lbl">años de experiencia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICIOS ══ -->
+<section id="servicios">
+  <div class="srv-header">
+    <span class="eyebrow">Nuestros Servicios</span>
+    <h2 class="sec-h2">Soluciones integrales para <span class="accent">su flota</span></h2>
+    <p class="sec-lead">Ofrecemos un servicio completo que abarca todo el ciclo de vida de sus equipos de manejo de materiales.</p>
+  </div>
+  <div class="srv-grid" id="srvGrid"></div>
+</section>
+
+<!-- ══ POR QUÉ ══ -->
+<section id="porque">
+  <div class="pq-header">
+    <span class="eyebrow on-dark">¿Por qué elegirnos?</span>
+    <h2 class="sec-h2 on-dark">La diferencia que <span class="amber">mueve su empresa</span></h2>
+  </div>
+  <div class="pq-grid">
+    <div class="pq-card">
+      <div class="pq-icon">⚡</div>
+      <span class="pq-num">&lt; 4 hrs</span>
+      <span class="pq-sub">Tiempo de respuesta</span>
+      <h4>Respuesta Rápida</h4>
+      <p>Atención en tiempos reducidos. Sabemos que cada hora de paro representa pérdidas para su empresa.</p>
+    </div>
+    <div class="pq-card">
+      <div class="pq-icon">⚙️</div>
+      <span class="pq-num">15+</span>
+      <span class="pq-sub">Marcas atendidas</span>
+      <h4>Experiencia Multimarca</h4>
+      <p>Servicio para diferentes fabricantes: Toyota, Crown, Hyster, Yale, Mitsubishi, Caterpillar y más.</p>
+    </div>
+    <div class="pq-card">
+      <div class="pq-icon">📦</div>
+      <span class="pq-num">500+</span>
+      <span class="pq-sub">Refacciones en catálogo</span>
+      <h4>Refacciones Disponibles</h4>
+      <p>Acceso a una amplia red de proveedores nacionales e internacionales para todos los modelos.</p>
+    </div>
+    <div class="pq-card">
+      <div class="pq-icon">🎧</div>
+      <span class="pq-num">100%</span>
+      <span class="pq-sub">Compromiso de servicio</span>
+      <h4>Atención Personalizada</h4>
+      <p>Soluciones adaptadas a cada cliente. Un asesor dedicado para su cuenta empresarial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLIENTES ══ -->
+<section id="clientes">
+  <div class="cli-head">
+    <span class="eyebrow" style="justify-content:center">Clientes</span>
+    <h2 class="sec-h2">Empresas que han <span class="accent">confiado en nosotros</span></h2>
+  </div>
+  <div class="cli-grid">
+    <div class="cli-card"><div class="cli-init">U</div><div class="cli-name">Válvulas URREA</div><div class="cli-sector">Manufactura Industrial</div></div>
+    <div class="cli-card"><div class="cli-init">IP</div><div class="cli-name">International Paper</div><div class="cli-sector">Papel y Packaging</div></div>
+    <div class="cli-card"><div class="cli-init">DC</div><div class="cli-name">Dulces Chompys</div><div class="cli-sector">Alimentos y Bebidas</div></div>
+    <div class="cli-card"><div class="cli-init">EG</div><div class="cli-name">Euroglass</div><div class="cli-sector">Vidrio Industrial</div></div>
+  </div>
+  <p class="cli-desc">Trabajamos con empresas líderes que requieren equipos confiables y soporte técnico especializado para mantener su cadena de suministro operando.</p>
+</section>
+
+<!-- ══ GALERÍA ══ -->
+<section id="galeria">
+  <div class="gal-header">
+    <span class="eyebrow" style="justify-content:center">Galería</span>
+    <h2 class="sec-h2">Equipos y <span class="accent">operaciones</span></h2>
+  </div>
+  <div class="gal-grid">
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80&auto=format&fit=crop" alt="Montacargas en almacén" onerror="this.style.background='#ccc'"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80&auto=format&fit=crop" alt="Almacén industrial" onerror="this.style.background='#bbb'"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80&auto=format&fit=crop" alt="Forklift" onerror="this.style.background='#aaa'"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?w=600&q=80&auto=format&fit=crop" alt="Refacciones industriales" onerror="this.style.background='#c5c5c5'"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80&auto=format&fit=crop" alt="Técnico en reparación" onerror="this.style.background='#b8b8b8'"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1581244277943-fe4a9c777540?w=600&q=80&auto=format&fit=crop" alt="Operaciones logísticas" onerror="this.style.background='#d0d0d0'"></div>
+  </div>
+</section>
+
+<!-- ══ CONTACTO ══ -->
+<section id="contacto">
+  <div class="con-inner">
+    <div>
+      <span class="eyebrow on-dark">Contacto</span>
+      <h2 class="con-h2">Solicita una <span>cotización</span></h2>
+      <p class="con-by">Atendida personalmente por <strong>Lizette Reynaga</strong></p>
+      <div class="con-info">
+        <div class="con-row">
+          <div class="con-ico">📞</div>
+          <div><div class="con-lbl">Teléfono</div><div class="con-val"><a href="tel:+523312345678">+52 33 1234 5678</a></div></div>
+        </div>
+        <div class="con-row">
+          <div class="con-ico">💬</div>
+          <div><div class="con-lbl">WhatsApp</div><div class="con-val"><a href="https://wa.me/523312345678">+52 33 1234 5678</a></div></div>
+        </div>
+        <div class="con-row">
+          <div class="con-ico">✉️</div>
+          <div><div class="con-lbl">Correo</div><div class="con-val"><a href="mailto:lizette@reymontmontacargas.com">lizette@reymontmontacargas.com</a></div></div>
+        </div>
+        <div class="con-row">
+          <div class="con-ico">📍</div>
+          <div><div class="con-lbl">Dirección</div><div class="con-val">Guadalajara, Jalisco, México</div></div>
+        </div>
+        <div class="con-row">
+          <div class="con-ico">🕐</div>
+          <div><div class="con-lbl">Horario</div><div class="con-val">Lun-Vie 8:00–18:00 · Sáb 8:00–14:00</div></div>
+        </div>
+      </div>
+      <a class="btn-wa-big" href="https://wa.me/523312345678" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+    <div class="con-form">
+      <div class="f-row">
+        <div class="f-group"><label>Nombre <span>*</span></label><input type="text" placeholder="Su nombre completo"></div>
+        <div class="f-group"><label>Empresa <span>*</span></label><input type="text" placeholder="Nombre de su empresa"></div>
+      </div>
+      <div class="f-row">
+        <div class="f-group"><label>Teléfono <span>*</span></label><input type="tel" placeholder="+52 33 XXXX XXXX"></div>
+        <div class="f-group"><label>Correo electrónico</label><input type="email" placeholder="correo@empresa.com"></div>
+      </div>
+      <div class="f-group">
+        <label>Mensaje / Tipo de servicio <span>*</span></label>
+        <textarea placeholder="Describa brevemente el servicio que necesita, marca del equipo, número de unidades, etc."></textarea>
+      </div>
+      <button class="btn-send" onclick="alert('¡Solicitud enviada! Le contactaremos pronto.')">
+        ✉️ Enviar Solicitud
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  © 2025 <span>REYMONT MONTACARGAS</span> · Guadalajara, Jalisco, México · Todos los derechos reservados
+</footer>
+<script src="./script.js"></script>
+</body>
+</html>
