@@ -309,21 +309,24 @@
       </a>
     </div>
     <div class="con-form">
-      <div class="f-row">
-        <div class="f-group"><label>Nombre <span>*</span></label><input type="text" placeholder="Su nombre completo"></div>
-        <div class="f-group"><label>Empresa <span>*</span></label><input type="text" placeholder="Nombre de su empresa"></div>
-      </div>
-      <div class="f-row">
-        <div class="f-group"><label>Teléfono <span>*</span></label><input type="tel" placeholder="+52 33 XXXX XXXX"></div>
-        <div class="f-group"><label>Correo electrónico</label><input type="email" placeholder="correo@empresa.com"></div>
-      </div>
-      <div class="f-group">
-        <label>Mensaje / Tipo de servicio <span>*</span></label>
-        <textarea placeholder="Describa brevemente el servicio que necesita, marca del equipo, número de unidades, etc."></textarea>
-      </div>
-      <button class="btn-send" onclick="alert('¡Solicitud enviada! Le contactaremos pronto.')">
-        ✉️ Enviar Solicitud
-      </button>
+      <form id="contactForm" action="https://formspree.io/f/xnjegvqy" method="POST">
+        <div class="f-row">
+          <div class="f-group"><label>Nombre <span>*</span></label><input type="text" name="nombre" placeholder="Su nombre completo" required></div>
+          <div class="f-group"><label>Empresa <span>*</span></label><input type="text" name="empresa" placeholder="Nombre de su empresa" required></div>
+        </div>
+        <div class="f-row">
+          <div class="f-group"><label>Teléfono <span>*</span></label><input type="tel" name="telefono" placeholder="+52 33 XXXX XXXX" required></div>
+          <div class="f-group"><label>Correo electrónico</label><input type="email" name="email" placeholder="correo@empresa.com"></div>
+        </div>
+        <div class="f-group">
+          <label>Mensaje / Tipo de servicio <span>*</span></label>
+          <textarea name="mensaje" placeholder="Describa brevemente el servicio que necesita, marca del equipo, número de unidades, etc." required></textarea>
+        </div>
+        <button class="btn-send" type="submit" id="sendBtn">
+          ✉️ Enviar Solicitud
+        </button>
+        <p id="formMsg" style="margin-top:.6rem;font-size:.9rem;"></p>
+      </form>
     </div>
   </div>
 </section>

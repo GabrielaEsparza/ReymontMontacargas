@@ -156,3 +156,39 @@ document.querySelectorAll('.nav-drawer a, .nav-links a').forEach(link => {
 window.addEventListener('resize', () => {
   if (window.innerWidth > 960) closeDrawer();
 });
+
+// ─── ENVÍO DEL FORMULARIO DE CONTACTO (Formspree) ───
+const contactForm = document.getElementById('contactForm');
+const sendBtn = document.getElementById('sendBtn');
+const formMsg = document.getElementById('formMsg');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Enviando...';
+    formMsg.textContent = '';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formMsg.style.color = '#2E7D32';
+        formMsg.textContent = '¡Solicitud enviada! Le contactaremos pronto.';
+        contactForm.reset();
+      } else {
+        throw new Error('Error en el envío');
+      }
+    } catch (error) {
+      formMsg.style.color = '#c62828';
+      formMsg.textContent = 'Hubo un problema al enviar. Intenta de nuevo o escríbenos por WhatsApp.';
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.innerHTML = '✉️ Enviar Solicitud';
+    }
+  });
+}
