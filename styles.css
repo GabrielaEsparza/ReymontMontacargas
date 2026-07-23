@@ -573,6 +573,7 @@ nav#navbar {
 /* ══════════════════════════════════
    CONTACTO
 ══════════════════════════════════ */
+
 #contacto { background: var(--forest-deep); position: relative; overflow: hidden; }
 .con-inner {
   max-width: var(--container); margin: 0 auto;
