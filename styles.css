@@ -1,25 +1,27 @@
 /* ══════════════════════════════════════════════════════
    REYMONT MONTACARGAS — Hoja de estilos
    Sistema: tipografía IBM Plex (Sans + Mono), paleta
-   verde/ámbar heredada pero atenuada para un tono
-   corporativo. Totalmente responsivo, mobile-first en
-   breakpoints clave.
+   verde/lima/naranja/rojo (paleta actualizada según
+   referencia visual). Totalmente responsivo, mobile-first
+   en breakpoints clave.
 ══════════════════════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Paleta — misma familia de color, tono más sobrio */
-  --forest-deep: #123319;   /* verde muy oscuro, header/footer/paneles */
-  --forest:      #1B5E20;   /* verde marca */
-  --leaf:        #2E7D32;   /* verde medio, acentos */
-  --amber:       #C9821E;   /* ámbar atenuado, usado en textos/acentos */
-  --amber-soft:  #E7A33F;
-  --nav-orange:  #F0972A;   /* naranja de marca para la navbar */
-  --lime:        #8BC63F;  /* verde limón, acento decorativo */
+  /* Paleta — códigos exactos proporcionados */
+  --forest-deep: #1E3A12;   /* verde muy oscuro (derivado de #78C841), header/footer/paneles */
+  --forest:      #5AA033;   /* verde marca, tono intermedio para gradientes */
+  --leaf:        #78C841;   /* verde medio vívido, acentos (color base de la paleta) */
+  --amber:       #FF9B2F;   /* naranja, usado en textos/acentos */
+  --amber-soft:  #FFB666;
+  --nav-orange:  #FF9B2F;   /* naranja brillante de marca para la navbar */
+  --nav-orange-deep: #E8801A; /* para gradientes/hover de navbar */
+  --lime:        #B4E50D;   /* verde limón vívido, acento decorativo */
+  --lime-deep:   #93BD0A;   /* variante más oscura del limón para contraste */
   --whatsapp:    #25D366;
-  --rust:        #A63A2C;   /* rojo atenuado */
-  --ink:         #1A1F1C;   /* texto principal */
+  --rust:        #FB4141;   /* rojo vivo de la paleta */
+  --ink:         #16201A;   /* texto principal */
   --muted:       #5B665F;   /* texto secundario, verdoso-gris */
   --paper:       #FAFAF8;   /* fondo cálido en vez de blanco puro */
   --white:       #FFFFFF;
@@ -37,7 +39,7 @@ html { scroll-behavior: smooth; }
 
 .brand-stripe {
   height: 4px;
-  background: linear-gradient(90deg, var(--lime), var(--nav-orange));
+  background: var(--leaf);
 }
 
 body {
@@ -104,7 +106,7 @@ section { padding: 5.5rem 5vw; }
    TIRA DE SERVICIOS (MARQUEE)
 ══════════════════════════════════ */
 .ticker {
-  background: var(--forest-deep);
+  background: var(--lime-deep);
   overflow: hidden;
   white-space: nowrap;
   position: relative;
@@ -147,8 +149,9 @@ nav#navbar {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: var(--nav-orange);
-  border-bottom: 1px solid rgba(0,0,0,.08);
+  background: linear-gradient(90deg, var(--nav-orange), var(--nav-orange-deep));
+  box-shadow: 0 4px 18px rgba(232,98,10,.25);
+  border-bottom: none;
   height: 76px;
 }
 .nav-inner {
@@ -228,19 +231,20 @@ nav#navbar {
 .nav-whatsapp svg { flex-shrink: 0; }
 
 .btn-nav {
-  background: var(--forest);
-  color: #fff;
+  background: #fff;
+  color: var(--forest);
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
   letter-spacing: .3px;
-  border: none; border-radius: 4px;
+  border: none; border-radius: 5px;
   padding: 11px 20px;
   text-decoration: none;
   white-space: nowrap;
-  transition: background .2s;
+  box-shadow: 0 3px 10px rgba(0,0,0,.15);
+  transition: background .2s, transform .2s, box-shadow .2s;
 }
-.btn-nav:hover { background: var(--forest-deep); }
+.btn-nav:hover { background: var(--lime); color: var(--forest-deep); transform: translateY(-1px); box-shadow: 0 5px 14px rgba(0,0,0,.2); }
 
 /* Hamburguesa */
 .hamburger {
@@ -348,13 +352,16 @@ nav#navbar {
 .check-icon { width: 17px; height: 17px; flex-shrink: 0; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 .btn-primary {
-  background: var(--forest); color: #fff;
-  font-family: var(--font-display); font-weight: 600;
+  background: linear-gradient(135deg, var(--leaf), var(--forest));
+  color: #fff;
+  font-family: var(--font-display); font-weight: 700;
   font-size: 13.5px; letter-spacing: .3px;
-  border: none; border-radius: 4px; padding: 14px 24px;
-  cursor: pointer; text-decoration: none; transition: background .2s;
+  border: none; border-radius: 5px; padding: 14px 26px;
+  cursor: pointer; text-decoration: none;
+  box-shadow: 0 6px 16px rgba(76,154,42,.3);
+  transition: transform .2s, box-shadow .2s;
 }
-.btn-primary:hover { background: var(--forest-deep); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(76,154,42,.4); }
 .btn-wa {
   background: var(--white); color: var(--ink);
   border: 1px solid var(--line);
@@ -459,7 +466,7 @@ nav#navbar {
   width: 16px; height: 16px;
   border-bottom: 2px solid var(--nav-orange); border-right: 2px solid var(--nav-orange);
 }
-.srv-card:hover { box-shadow: 0 12px 28px rgba(18,51,25,.1); transform: translateY(-3px); }
+.srv-card:hover { box-shadow: 0 12px 28px rgba(31,61,20,.1); transform: translateY(-3px); }
 
 .car-wrap { position: relative; height: 190px; overflow: hidden; border-bottom: 1px solid var(--line); }
 .car-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .7s ease; }
@@ -510,7 +517,7 @@ nav#navbar {
 .pq-card:nth-child(2n) { border-top-color: var(--nav-orange); }
 .pq-icon {
   width: 40px; height: 40px; border-radius: 4px;
-  background: rgba(231,163,63,.14); border: 1px solid rgba(231,163,63,.3);
+  background: rgba(255,153,51,.14); border: 1px solid rgba(255,153,51,.3);
   display: flex; align-items: center; justify-content: center;
   font-size: 18px; margin-bottom: 1.1rem;
 }
@@ -662,6 +669,29 @@ nav#navbar {
   transition: background .2s;
 }
 .btn-send:hover { background: #143d16; }
+
+/* ══════════════════════════════════
+   WHATSAPP FLOTANTE
+══════════════════════════════════ */
+.wa-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 900;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: var(--whatsapp); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 18px rgba(37,211,102,.45);
+  text-decoration: none;
+  animation: wa-pulse 2.4s infinite;
+}
+.wa-float:hover { animation: none; transform: scale(1.06); }
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 6px 18px rgba(37,211,102,.45), 0 0 0 0 rgba(37,211,102,.55); }
+  70%  { box-shadow: 0 6px 18px rgba(37,211,102,.45), 0 0 0 14px rgba(37,211,102,0); }
+  100% { box-shadow: 0 6px 18px rgba(37,211,102,.45), 0 0 0 0 rgba(37,211,102,0); }
+}
+@media (prefers-reduced-motion: reduce) { .wa-float { animation: none; } }
+@media (max-width: 640px) {
+  .wa-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+}
 
 /* ══════════════════════════════════
    FOOTER
