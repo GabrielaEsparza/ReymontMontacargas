@@ -45,7 +45,7 @@ const svcs = [
     title: 'Venta de Equipos Nuevos',
     desc: 'Montacargas para diferentes capacidades y aplicaciones industriales.',
     imgs: [
-      './assets/EquiposNuevos.jpeg',
+      './assets/equiposNuevos.jpeg',
       './assets/EquiposNuevos1.jpeg',
       './assets/EquiposNuevos.2jpeg',
       './assets/EquiposNuevos.jpeg',
