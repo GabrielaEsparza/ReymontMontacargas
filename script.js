@@ -2,12 +2,14 @@
 const svcs = [
   {
     icon: '📄',
-    title: 'Certificaciones DC-3',
+    title: 'Capacitación y Certificación DC-3',
     desc: 'Tramitamos la constancia DC-3 ante la STPS, que certifica la capacitación y las habilidades de sus operadores de montacargas.',
     imgs: [
-      './assets/image1.png',
-      './assets/image2.png',
-      './assets/image3.png'
+      './assets/dc.jpeg',
+      './assets/dc1.jpeg',
+      './assets/dc2.jpeg',
+      './assets/dc3.jpeg',
+      './assets/dc4.jpeg',
     ]
   },
   {
@@ -15,9 +17,12 @@ const svcs = [
     title: 'Mantenimiento Preventivo y Correctivo',
     desc: 'Programas personalizados para maximizar la vida útil de los equipos.',
     imgs: [
-      './assets/mantenimiento.png',
-      './assets/mantenimiento1.png',
-      './assets/mantenimiento2.png'
+      './assets/reparacion.jpeg',
+      './assets/reparacion1.jpeg',
+      './assets/reparacion2.jpeg',
+      './assets/reparacion3.jpeg',
+      './assets/reparacion4.jpeg',
+      
     ]
   },
   {
@@ -25,9 +30,14 @@ const svcs = [
     title: 'Renta de Montacargas',
     desc: 'Equipos disponibles para necesidades temporales o proyectos especiales.',
     imgs: [
-      './assets/renta.png',
-      './assets/renta1.png',
-      './assets/renta2.png'
+      './assets/renta.jpeg',
+      './assets/renta1.jpeg',
+      './assets/renta2.jpeg',
+      './assets/renta3.jpeg',
+      './assets/renta4.jpeg',
+      './assets/renta5.jpeg',
+      './assets/renta6.jpeg',
+      './assets/renta7.jpeg'
     ]
   },
   {
@@ -35,19 +45,23 @@ const svcs = [
     title: 'Venta de Equipos Nuevos',
     desc: 'Montacargas para diferentes capacidades y aplicaciones industriales.',
     imgs: [
-      './assets/EquiposNuevos.png',
-      './assets/EquiposNuevos1.png',
-      './assets/EquiposNuevos2.png'
+      './assets/EquiposNuevos.jpeg',
+      './assets/EquiposNuevos1.jpeg',
+      './assets/EquiposNuevos.2jpeg',
+      './assets/EquiposNuevos.jpeg',
+    
     ]
   },
   {
     icon: '📦',
-    title: 'Venta de Refacciones y Llantas',
+    title: 'Venta de Traspaletas, Refacciones y Llantas',
     desc: 'Refacciones originales y compatibles para múltiples marcas.',
     imgs: [
-      './assets/refaccion.png',
-      './assets/refaccion1.png',
-      './assets/refaccion2.png'
+      './assets/venta4.jpeg',
+      './assets/venta.jpeg',
+      './assets/venta1.jpeg',
+      './assets/venta2.jpeg',
+      './assets/venta3.jpeg',
     ]
   },
   {
@@ -55,9 +69,9 @@ const svcs = [
     title: 'Maniobras con Operador',
     desc: 'Rentamos el operador: nuestro personal se encarga de la carga y descarga de su mercancía en sus instalaciones.',
     imgs: [
-      './assets/maniobras.png',
-      './assets/maniobras1.png',
-      './assets/maniobras2.png'
+      './assets/maniobras.jpeg',
+      './assets/maniobras1.jpeg',
+      './assets/maniobras2.jpeg'
     ]
   }
 ];
