@@ -46,7 +46,7 @@ const svcs = [
     imgs: [
       './assets/equiposNuevos.jpeg',
       './assets/equiposNuevos1.jpeg',
-      './assets/equiposNuevos2.2jpeg',
+      './assets/equiposNuevos2.jpeg',
       './assets/equiposNuevos3.jpeg',
     
     ]
