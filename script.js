@@ -19,7 +19,6 @@ const svcs = [
     imgs: [
       './assets/reparacion.jpeg',
       './assets/reparacion1.jpeg',
-      './assets/reparacion2.jpeg',
       './assets/reparacion3.jpeg',
       './assets/reparacion4.jpeg',
       
@@ -46,9 +45,9 @@ const svcs = [
     desc: 'Montacargas para diferentes capacidades y aplicaciones industriales.',
     imgs: [
       './assets/equiposNuevos.jpeg',
-      './assets/EquiposNuevos1.jpeg',
-      './assets/EquiposNuevos.2jpeg',
-      './assets/EquiposNuevos.jpeg',
+      './assets/equiposNuevos1.jpeg',
+      './assets/equiposNuevos2.2jpeg',
+      './assets/equiposNuevos3.jpeg',
     
     ]
   },
