@@ -21,6 +21,8 @@ const svcs = [
       './assets/reparacion1.jpeg',
       './assets/reparacion3.jpeg',
       './assets/reparacion4.jpeg',
+      './assets/refacciones.jpeg',
+      './assets/Refacciones1.jpeg',
       
     ]
   },
@@ -48,6 +50,8 @@ const svcs = [
       './assets/equiposNuevos1.jpeg',
       './assets/equiposNuevos2.jpeg',
       './assets/equiposNuevos3.jpeg',
+      './assets/equiposNuevos4.jpeg',
+      './assets/equiposNuevos5.jpeg',
     
     ]
   },
